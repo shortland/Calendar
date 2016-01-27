@@ -93,12 +93,13 @@ $(document).ready(function()
             {
                 var useYear = localStorage.getItem("cYear");
             }
-            if((d.getMonth()) == 0)
+            if(monthAsInt == -1)
             {
+                alert("valid");
                 //var useYear = d.getFullYear() - 1;
                 var useYear = parseInt($("#thisYear").html()) - 1;
                 localStorage.setItem("cYear", useYear)
-                var useMonthAsInt = 11;
+                var monthAsInt = 11;
             }
             localStorage.setItem("cMonth", monthAsInt);
             var useMonth = month[monthAsInt];
@@ -117,26 +118,26 @@ $(document).ready(function()
         $("#thisMonth").html(thisMonth);
         $("#thisYear").html(year);
 
-    	// gets amount of days in specified month & year
-    	// http://stackoverflow.com/a/1184359
-    	function daysInMonth(thisMonthDay, year)
-    	{
-    	    return new Date(year, thisMonthDay, 0).getDate();
-    	}
+        // gets amount of days in specified month & year
+        // http://stackoverflow.com/a/1184359
+        function daysInMonth(thisMonthDay, year)
+        {
+            return new Date(year, thisMonthDay, 0).getDate();
+        }
 
         // gets the total days for this month alone
         var thisMonthRaw = thisMonthDay + 1;
 
         // gets which day of the week the first day is
-    	if(thisMonthRaw.toString().length == 1)
-    	{
+        if(thisMonthRaw.toString().length == 1)
+        {
             var thisMonthRawInt = "0" + thisMonthRaw.toString();
-    	}
+        }
         else
         {
             var thisMonthRawInt = thisMonthRaw.toString();
         }
-    	var firstDay = new Date(year + "-" + thisMonthRawInt + "-01").getDay();
+        var firstDay = new Date(year + "-" + thisMonthRawInt + "-01").getDay();
         var realDay = new Array();
         realDay[0] = "Monday";
         realDay[1] = "Tuesday";
@@ -149,7 +150,7 @@ $(document).ready(function()
 
         setCalendar();
         // setting the calendar
-    	function setCalendar()
+        function setCalendar()
         {
             // total days for the month
             var daysThisMonth = daysInMonth(thisMonthRaw, year);
