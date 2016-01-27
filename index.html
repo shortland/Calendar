@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width, height=device-height" minimal-ui/>
+	<script src='js/jquery.js'></script>
+	<script src='js/jquery_colors.js'></script>
+	<script src='js/fastclick.js'></script>
+	<script src='js/script.js'></script>
+	<link rel="stylesheet" type="text/css" href='css/style.css'/>
+	<title>Calendar</title>
+    <script type="text/javascript">
+    $(function()
+    {
+        FastClick.attach(document.body);
+    });
+    </script>
+</head>
+<body>
+
+<div id='calendar'>
+	<table cellspacing="0" cellpadding="6"> 
+		<tr>
+			<td style="background-color: rgba(81, 81, 81, 1.0); border-right: 0px;"><div id="previousMonth">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</div></td>
+			<td colspan="5" align="center" style="border-right: 0px; border-left: 0px; cursor: default !important;background-color: rgba(81, 81, 81, 1.0);"><b id="thisMonth"></b>&nbsp;&nbsp;<b id="thisYear"></b></td> 
+			<td style="background-color: rgba(81, 81, 81, 1.0); border-left: 0px;"><div id="nextMonth">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</div></td>
+		</tr>
+		<tr> 
+			<td style="cursor: default !important;" align="center">Sun</td>
+			<td style="cursor: default !important;" align="center">Mon</td>
+			<td style="cursor: default !important;" align="center">Tue</td>
+			<td style="cursor: default !important;" align="center">Wed</td>
+			<td style="cursor: default !important;" align="center">Thu</td>
+			<td style="cursor: default !important;" align="center">Fri</td>
+			<td style="cursor: default !important;" align="center">Sat</td>
+		</tr>
+		<tr> 
+			<td align="center" id="999" class="dayDate"></td> <!-- sunday, so it should be ""-->
+			<td align="center" id="1000" class="dayDate"></td>
+			<td align="center" id="1001" class="dayDate"></td>
+			<td align="center" id="1002" class="dayDate"></td>
+			<td align="center" id="1003" class="dayDate"></td>
+			<td align="center" id="1004" class="dayDate"></td>
+			<td align="center" id="1005" class="dayDate"></td>
+		</tr>
+		<tr> 
+			<td align="center" id="1006" class="dayDate"></td>
+			<td align="center" id="1007" class="dayDate"></td>
+			<td align="center" id="1008" class="dayDate"></td>
+			<td align="center" id="1009" class="dayDate"></td>
+			<td align="center" id="1010" class="dayDate"></td>
+			<td align="center" id="1011" class="dayDate"></td>
+			<td align="center" id="1012" class="dayDate"></td>
+		</tr>
+		<tr> 
+			<td align="center" id="1013" class="dayDate"></td>
+			<td align="center" id="1014" class="dayDate"></td>
+			<td align="center" id="1015" class="dayDate"></td>
+			<td align="center" id="1016" class="dayDate"></td>
+			<td align="center" id="1017" class="dayDate"></td>
+			<td align="center" id="1018" class="dayDate"></td>
+			<td align="center" id="1019" class="dayDate"></td>
+		</tr>
+		<tr> 
+			<td align="center" id="1020" class="dayDate"></td>
+			<td align="center" id="1021" class="dayDate"></td>
+			<td align="center" id="1022" class="dayDate"></td>
+			<td align="center" id="1023" class="dayDate"></td>
+			<td align="center" id="1024" class="dayDate"></td>
+			<td align="center" id="1025" class="dayDate"></td>
+			<td align="center" id="1026" class="dayDate"></td>
+		</tr>
+		<tr> 
+			<td align="center" id="1027" class="dayDate"></td>
+			<td align="center" id="1028" class="dayDate"></td>
+			<td align="center" id="1029" class="dayDate"></td>
+			<td align="center" id="1030" class="dayDate"></td>
+			<td align="center" id="1031" class="dayDate"></td>
+			<td align="center" id="1032" class="dayDate"></td>
+			<td align="center" id="1033" class="dayDate"></td>
+		</tr>
+		<tr> 
+			<td align="center" id="1034" class="dayDate"></td>
+			<td align="center" id="1035" class="dayDate"></td>
+			<td align="center" id="1036" class="dayDate"></td>
+			<td align="center" id="1037" class="dayDate"></td>
+			<td align="center" id="1038" class="dayDate"></td>
+			<td align="center" id="1039" class="dayDate"></td>
+			<td align="center" id="1040" class="dayDate"></td>
+		</tr>
+	</table>
+</div>
+
+</body>
+</html>
