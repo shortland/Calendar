@@ -95,7 +95,6 @@ $(document).ready(function()
             }
             if(monthAsInt == -1)
             {
-                alert("valid");
                 //var useYear = d.getFullYear() - 1;
                 var useYear = parseInt($("#thisYear").html()) - 1;
                 localStorage.setItem("cYear", useYear)
