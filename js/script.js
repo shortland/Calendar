@@ -173,5 +173,21 @@ $(document).ready(function()
                 j = j + 1;
             }
         }
+
+        // cleans up calendar view
+        if(!$("#1034").html())
+        {
+            for (i = 1034; i <= 1040; i++)
+            {
+                $("#" + i).css({"padding" : "0", "border-width" : "0"});
+            }
+        }
+        else
+        {
+            for (i = 1034; i <= 1040; i++)
+            {
+                $("#" + i).css({"padding" : "5", "border-width" : ".5"});
+            }
+        }
     }
 });
